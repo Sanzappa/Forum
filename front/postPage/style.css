@@ -1,0 +1,485 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0D1117;
+}
+
+header {
+    height: 12vh;
+    width: 100vw;
+    background-color: #0D1117;
+    box-shadow: 0px 10px 20px rgba(45, 57, 74, 0.25);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    height: 85px;
+    width: 80px;
+    margin-left: 150px;
+}
+
+.titulo {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#flo {
+    color: #2880B9;
+    font-size: 40pt;
+}
+
+#poi {
+    color: #fff;
+    font-size: 40pt;
+    position: relative;
+    left: -15px;
+    top: -8px;
+}
+
+.user {
+    height: 100%;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.user>span {
+    margin-left: 40px;
+    font-size: 15pt;
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+main {
+    height: 88vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 3% 20px 20px;
+}
+
+.tags {
+    height: 100%;
+    width: 15%;
+    background-color: rgba(217, 217, 217, 0.26);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 30px;
+}
+
+#buscaTag {
+    background-color: #D9D9D9;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #000;
+    letter-spacing: 2px;
+}
+
+#buscaTag:focus {
+    outline: none;
+}
+
+#buscaTag::placeholder {
+    color: #000;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tag {
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.tag>span {
+    color: #000;
+    font-size: xx-large;
+    font-weight: 800
+}
+
+.posts {
+    height: 100%;
+    width: 82%;
+    background-color: #122E41;
+    padding: 30px 60px;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.post {
+    position: relative;
+    height: 250px;
+    width: 800px;
+    background-color: #064365;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    z-index: 4;
+}
+
+.post2 {
+    height: auto;
+    width: auto;
+}
+
+#tri {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: none;
+    border: none;
+    height: 20px;
+    transition: .5s;
+}
+
+.info {
+    color: #fff;
+    max-width: 75%;
+    height: auto;
+    font-size: 20pt;
+    font-weight: 600;
+    padding: 10px;
+    position: relative;
+}
+
+.postTags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: auto;
+    padding: 10px;
+}
+
+.postTag {
+    height: 35px;
+    width: 100px;
+    background-color: #62CBEC;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.dataNome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 220px;
+    height: 60px;
+    font-size: medium;
+    font-weight: 700;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.comment {
+    height: 100%;
+    width: 610px;
+    background-color: #0b354b00;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 0px 5px 5px 0px;
+    transition: right 0.8s;
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+}
+
+.infoComment {
+    height: 100%;
+    width: 90%;
+    background-color: #064365;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    transition: opacity .7s, height 1s ease-in-out;
+    opacity: 0;
+}
+
+.dadosComment {
+    border-left: 2px solid white;
+    height: auto;
+    width: 80%;
+    padding-left: 10px;
+    margin-bottom: 30px;
+}
+
+.userComment {
+    color: #cfcfcf;
+    font-size: medium;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.respostaComment {
+    color: #fff;
+    font-weight: 800;
+    max-width: 90%;
+    margin: 20px;
+    font-size: large;
+}
+
+.dataComment {
+    color: #bbc0c5;
+    font-weight: 700;
+    font-size: medium;
+}
+
+.cadAnswer {
+    margin: 0px 0px 20px 45px;
+    padding-left: 20px;
+}
+
+.cadAnswer>button {
+    height: 40px;
+    width: 100px;
+    background-color: #05638f;
+    border: 2px solid #1e3568;
+    color: #fff;
+    font-size: 8pt;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.answerComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-left: 2px solid #adacac;
+    margin: 0px 0px 20px 45px;
+    padding-left: 10px;
+}
+
+.userAnswer {
+    color: #cfcfcf;
+    font-size: small;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.respostaAnswer {
+    color: #fff;
+    font-weight: 800;
+    max-width: 90%;
+    margin: 20px;
+    font-size: medium;
+}
+
+.dataAnswer {
+    color: #bbc0c5;
+    font-weight: 700;
+    font-size: small;
+}
+
+.model {
+    visibility: hidden;
+    display: none;
+}
+
+.noComment {
+    min-height: 0px;
+    max-height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-size: larger;
+    font-weight: bold;
+    color: #bbc0c5;
+}
+
+.cadComment {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cadComment>button {
+    height: 60px;
+    width: 150px;
+    border-radius: 2px;
+    background-color: #023658;
+    border: 2px solid rgb(9, 63, 124);
+    transition: all .6s ease-in-out;
+    font-size: larger;
+    color: #62CBEC;
+}
+
+.cadComment>button:hover {
+    background-color: #05638f;
+    color: #091849;
+}
+
+.user>button {
+    background: none;
+    border: none;
+}
+
+.user>button>img {
+    height: 40px;
+}
+
+.modalP, .modalC, .modalA {
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #122e417a;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 0;
+
+}
+
+.modal2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 550px;
+    width: 55%;
+    background-color: rgb(25, 82, 109);
+    font-size: 30pt;
+    letter-spacing: 2px;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.modal3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 30%;
+}
+
+.cad {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cad>textarea {
+    border: 3px solid rgb(24, 46, 85);
+    background-color: #023658;
+    color: #fff;
+    padding: 15px;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.cad>textarea::placeholder {
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+}
+
+.cad>textarea:focus {
+    outline: none;
+}
+
+#tagsPost {
+    background-color: #023658;
+    border: 3px solid rgb(24, 46, 85);
+    height: 60px;
+    width: 200px;
+    color: #fff;
+    padding: 10px;
+    font-size: large;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#enviarPost {
+    background-color: #FFF;
+    border: none;
+    border-radius: 15px;
+    height: 20%;
+    width: 45%;
+    font-size: medium;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.mascara {
+    background-color: #122E41;
+    height: 0px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+}
+
+#semCor {
+    color: #000!important;
+    cursor: pointer;
+}
+
+#corSpan {
+    color: #023658!important;
+    cursor: pointer;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 10px;
+}

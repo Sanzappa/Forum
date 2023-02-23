@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0D1117;
+}
+
+header {
+    height: 12vh;
+    width: 100vw;
+    background-color: #0D1117;
+    box-shadow: 0px 10px 20px rgba(45, 57, 74, 0.25);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    height: 85px;
+    width: 80px;
+    margin-left: 150px;
+}
+
+.titulo {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#flo {
+    color: #2880B9;
+    font-size: 40pt;
+}
+
+#poi {
+    color: #fff;
+    font-size: 40pt;
+    position: relative;
+    left: -15px;
+    top: -8px;
+}
+
+.sign {
+    height: 100%;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#viewPoint {
+    height: 40px;
+    width: 140px;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    color: #fff;
+    transition: background-Color .6s, color .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#viewPoint:hover {
+    background-color: #ffffff;
+    color: #0052CC;
+}
+#ondas {
+    position: absolute;
+    top: 12vh;
+    left: 23vw;
+    height: 85%;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1350px) {
+    #ondas{
+        left: 6vw;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #ondas{
+        left: 0vw;
+        height: 80%;
+    }
+}
+
+main {
+    height: 88vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.register, .Login {
+    height: 600px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.register {
+    background: linear-gradient(222.21deg, #182E50 -5.9%, #111620 64.72%);
+}
+
+.Login {
+    background: linear-gradient(143.89deg, #182E50 -1.64%, #111620 72.78%);
+}
+
+.title{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40pt;
+    color: #fff;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+    width: 100%;
+}
+
+.user, .pass{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user>input, .pass>input{
+    width: 150px;
+    height: 30px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #9c9c9c;
+    padding-left: 10px;
+}
+
+.btn {
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.btn>button{
+    height: 50px;
+    width: 200px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    color: #fff;
+    font-weight: 900;
+    transition: border-color .5s, color .5s;
+}
+
+.btn>button:hover {
+    border-color: #0052CC;
+    color: #0052CC;
+}

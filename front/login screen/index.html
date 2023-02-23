@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="../viewpoint/docs/logo2.png" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <title>Floating Point</title>
+</head>
+
+<body>
+    <header>
+        <img src="./docs/logo2.png" alt="Logo FloatingPoint" id="logo">
+        <div class="titulo">
+            <span id="flo">Floating</span>
+            <span id="poi">Point</span>
+        </div>
+        <div class="sign">
+            <buttton id="viewPoint" onclick="viewPage()"><span>Home</span></buttton>
+        </div>
+    </header>
+    <main>
+        <div class="register">
+            <div class="title">
+                <span>Register</span>
+            </div>
+            <div class="info">
+                <div class="user">
+                    <input type="text" id="userRe" placeholder="User">
+                    <input type="text" id="nameRe" placeholder="Name">
+                </div>
+                <div class="pass">
+                    <input type="password" id="passRe" placeholder="Password">
+                    <input type="password" id="conPassRe" placeholder="Confirm Password">
+                </div>
+            </div>
+            <div class="btn">
+                <button onclick="cadastrar()">Sign in</button>
+            </div>
+        </div>
+
+        <div class="Login">
+            <div class="title">
+                <span>Login</span>
+            </div>
+            <div class="info">
+                <div class="user">
+                    <input type="text" id="userLogn" placeholder="User">
+                </div>
+                <div class="pass">
+                    <input type="password" id="passLogn" placeholder="Password">
+                </div>
+            </div>
+            <div class="btn">
+                <button onclick="login()">Log in</button>
+            </div>
+        </div>
+    </main>
+    <img src="./docs/image-removebg-preview (2).png" alt="Ondas" id="ondas">
+</body>
+<script src="./script.js"></script>
+
+</html>

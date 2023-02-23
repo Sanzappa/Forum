@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0D1117;
+}
+
+header {
+    height: 12vh;
+    width: 100vw;
+    background-color: #0D1117;
+    box-shadow: 0px 10px 20px rgba(45, 57, 74, 0.25);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    height: 85px;
+    width: 80px;
+    margin-left: 150px;
+}
+
+.titulo {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50px;
+}
+
+#flo {
+    color: #2880B9;
+    font-size: 40pt;
+}
+
+#poi {
+    color: #fff;
+    font-size: 40pt;
+    position: relative;
+    left: -15px;
+    top: -8px;
+}
+
+.sign {
+    height: 100%;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#signIn {
+    height: 40px;
+    width: 140px;
+    background: #0052CC;
+    border: 2px solid #0052CC;
+    border-radius: 20px;
+    color: #fff;
+    transition: background-Color .6s;
+}
+
+#signIn:hover{
+    background-color: #ffffff00;
+}
+
+#ondas {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 500px;
+    z-index: -1;
+}
+
+main {
+    height: 88vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    height: 500px;
+    width: 750px;
+    margin-top: -200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.descricao {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.descricao>span {
+    color: #fff;
+    font-size: 50pt;
+}
+
+.desRet {
+    height: 80px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(93.44deg, rgba(255, 255, 255, 0.56) 20.23%, rgba(15, 21, 83, 0) 70.49%, rgba(51, 83, 79, 0.0845833) 88.15%);
+    border-radius: 5px;
+}
+
+#desFlo {
+    font-size: 50pt;
+    background: linear-gradient(96.29deg, #0081C9 15.15%, #FFFFFF 96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.duvida {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.duvida>input {
+    height: 80px;
+    width: 750px;
+    background-color: #171E25;
+    border-radius: 50px;
+    position: absolute;
+    padding-left: 40px;
+    font-size: 20pt;
+    color: #3D4650;
+}
+
+::placeholder {
+    color: #3D4650;
+}
+
+#buscar {
+    height: 60px;
+    width: 200px;
+    background-color: #0052CC;
+    position: relative;
+    left: 220px;
+    border-radius: 50px;
+    border: none;
+}
+
+#lupa {
+    height: 40px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body onload="carregarPost(), carregarTags()">
+    <header>
+        <img src="./docs/logo2.png" alt="Logo FloatingPoint" id="logo">
+        <div class="titulo">
+            <span id="flo">Floating</span>
+            <span id="poi">Point</span>
+        </div>
+        <div class="user">
+            <button id="showModal"
+                                onclick="cadPost(this.parentNode.parentNode.parentNode.parentNode)"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828817.png" alt=""></button>
+            <span>Felipe_Gostoso</span>
+            <a href="../viewpoint/index.html" style="margin: 20px; font-size: 15pt; color: rgb(241, 2, 2);">Sair</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="tags">
+            <input type="text" id="buscaTag" placeholder="Search" onkeyup="filtrarTags()">
+            <div class="tag">
+                <span onclick="filtrarPost(this)">Todos</span>
+            </div>
+        </div>
+        <div class="posts">
+            <div class="post model" id="teste" onclick="showComment(this)">
+                <img src="./docs/triangulo.png" alt="triangulo" id="tri">
+                <div class="info">
+                    <span id="pergunta"></span>
+                </div>
+                <div class="postTags">
+                    <div class="postTag model"><span></span></div>
+                </div>
+                <div class="dataNome">
+                    <span id="nome"></span>
+                    <span id="data"></span>
+                </div>
+                <div class="comment" id="teste">
+                    <div class="infoComment">
+                        <div class="dadosComment model">
+                            <div class="userComment"><span>Sanzappa</span></div>
+                            <div class="respostaComment"><span>Num dwdd wdwdwd wdwdw wdwdw wdwd sei meu</span></div>
+                            <div class="answerComment model">
+                                <div class="userAnswer"><span>Felipe_Gostoso</span></div>
+                                <div class="respostaAnswer"><span>Muito Obrigado</span></div>
+                                <div class="dataAnswer"><span>05/12/2022</span></div>
+                            </div>
+                            <div class="cadAnswer model">
+                                <button id="cadAnswer" onclick="showAnswer()"><span>responder</span></button>
+                            </div>
+                            <div class="dataComment"><span>02/12/2022</span></div>
+                        </div>
+                        <div class="noComment model">
+                            <span>Está postagem ainda não possui comentário</span>
+                            <span>seja o primeiro!</span>
+                        </div>
+                        <div class="cadComment">
+                            <button id="showComment"
+                                onclick="cadComment(this.parentNode.parentNode.parentNode.parentNode)"><span>Comentar</span></button>
+                        </div>
+                        <div class="mascara"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalP model">
+            <div class="modal2">
+                <span>Realizar Postagem</span>
+                <div class="cad">
+                    <textarea cols="60" rows="10" maxlength="250" placeholder="Digite aqui sua Duvida"></textarea>
+
+                    <div class="modal3">
+                        <select id="tagsPost">
+                            
+                        </select>
+    
+                        <button id="enviarPost" onclick="enviarPost()"><span>Postar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalC model">
+            <div class="modal2">
+                <span>Realizar Comentario</span>
+                <div class="cad">
+                    <textarea id="textComment" cols="60" rows="10" maxlength="250" placeholder="Digite aqui seu comentário"></textarea>
+
+                    <div class="modal3">
+    
+                        <button id="enviarPost" onclick="enviarComment()"><span>Comentar</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modalA model">
+            <div class="modal2">
+                <span>Responder Comentario</span>
+                <div class="cad">
+                    <textarea id="textanswer" cols="60" rows="10" maxlength="250" placeholder="Digite aqui seu comentário"></textarea>
+
+                    <div class="modal3">
+    
+                        <button id="enviarPost" onclick="enviarAnswer()"><span>Responder</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="./script.js"></script>
+
+</html>
